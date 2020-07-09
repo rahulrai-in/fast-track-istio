@@ -1,0 +1,40 @@
+{{template "base" .}}
+
+{{define "title"}}Books - Classic{{ end }}
+
+{{define "main"}}
+    <h2>The Book Shelf - Classic</h2>
+    {{range .Error}}
+        <label class='error'>{{.}}</label> <br/>
+    {{end}}
+    <label class='info'>Source: {{.BooksTemplateData.RequestMetadata.Source}}</label>
+    <label class='info'>Duration: {{.BooksTemplateData.RequestMetadata.RequestDuration}}</label> <br/>
+    {{if .BooksTemplateData.Books}}
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Thumbnail</th>
+                <th>Date Added</th>
+            </tr>
+            {{range .BooksTemplateData.Books}}
+                <tr>
+                    <td>{{.Title}}</td>
+                    <td>{{titleCase .Author}}</td>
+                    <td>{{.Genre}}</td>
+                    <td>
+                        {{ if .Thumbnail }}
+                            <img src="data:image/png;base64, {{.Thumbnail}}" alt="{{.Title}}"/>
+                        {{else}}
+                            <img src="https://via.placeholder.com/150?text=No+Image+Available" alt="{{.Title}}"/>
+                        {{end}}
+                    </td>
+                    <td>{{humanDate .Date}}</td>
+                </tr>
+            {{end}}
+        </table>
+    {{else}}
+        <p>No books</p>
+    {{end}}
+{{ end }}

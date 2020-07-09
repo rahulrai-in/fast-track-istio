@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "date": "2020-01-12T00:00:00Z",
+    "title": "Where the Crawdads Sing",
+    "thumbnail": "img/book1.jpg",
+    "author": "DELIA OWENS",
+    "genre": "Fiction",
+    "summary": "For years, rumors of the 'Marsh Girl' have haunted Barkley Cove, a quiet town on the North Carolina coast. So in late 1969, when handsome Chase Andrews is found dead, the locals immediately suspect Kya Clark, the so-called Marsh Girl. But Kya is not what they say. Sensitive and intelligent, she has survived for years alone in the marsh that she calls home, finding friends in the gulls and lessons in the sand. Then the time comes when she yearns to be touched and loved. When two young men from town become intrigued by her wild beauty, Kya opens herself to a new life - until the unthinkable happens."
+  },
+  {
+    "id": 2,
+    "date": "2020-02-05T00:00:00Z",
+    "title": "The Ballad of Songbirds and Snakes",
+    "thumbnail": "img/book2.jpg",
+    "author": "SUZANNE COLLINS",
+    "genre": "Fiction",
+    "summary": "Ambition will fuel him. Competition will drive him. But power has its price. It is the morning of the reaping that will kick off the tenth annual Hunger Games. In the Capitol, eighteen-year-old Coriolanus Snow is preparing for his one shot at glory as a mentor in the Games. The once-mighty house of Snow has fallen on hard times, its fate hanging on the slender chance that Coriolanus will be able to outcharm, outwit, and outmanoeuvre his fellow students to mentor the winning tribute. The odds are against him. He’s been given the humiliating assignment of mentoring the female tribute from District 12, the lowest of the low. Their fates are now completely intertwined — every choice Coriolanus makes could lead to favour or failure, triumph or ruin. Inside the arena, it will be a fight to the death. Outside the arena, Coriolanus starts to feel for his doomed tribute  and must weigh his need to follow the rules against his desire to survive no matter what it takes."
+  },
+  {
+    "id": 3,
+    "date": "2020-02-21T00:00:00Z",
+    "title": "The Summer House",
+    "thumbnail": "img/book3.jpg",
+    "author": "JAMES PATTERSON & BRENDAN DUBOIS",
+    "genre": "Fiction",
+    "summary": "Once a luxurious getaway for a wealthy Southern family, the Summer House has long since fallen into disrepair. Its fall from grace is complete when it becomes the scene of a horrific mass murder. Shocking evidence points to four Army Rangers recently returned from Afghanistan. The Army sends Major Jeremiah Cook, a war veteran and former NYPD cop, to investigate. As Cook and his team struggle to put together pieces of evidence that just won’t fit, powerful forces rally against them to try to ensure that damning secrets are buried along with the victims."
+  },
+  {
+    "id": 4,
+    "date": "2020-03-12T00:00:00Z",
+    "title": "A Brief History of Time",
+    "thumbnail": "img/book4.jpg",
+    "author": "STEPHEN HAWKING",
+    "genre": "Science",
+    "summary": "Like prior editions of the book - but even more so - A Briefer History of Time will guide non-scientists everywhere in the ongoing search for the tantalizing secrets at the heart of time and space. This is Stephen Hawking's somewhat 'briefer' account of his up-to-date and most recent scientific observations and findings. A great companion to his original worldwide bestseller, A Brief History of Time. From curved space to quantum theory, the authors have expanded on areas of special interest and recent progress, such as developments in string theory and exciting progress in the search for a force of complete, unified theory of all the forces of physics. Thirty-eight full-colour illustrations enhance the text and make A Briefer History of Time an exhilarating addition in its own right to the literature of science."
+  },
+  {
+    "id": 5,
+    "date": "2020-04-01T00:00:00Z",
+    "title": "The Age of Reason",
+    "thumbnail": "img/book5.jpg",
+    "author": "BILL BRYSON",
+    "genre": "Science",
+    "summary": "As an introduction to early modern thinking and the impact of past ideas on present lives, this book can find few equals and no superiors. Porter is a witty, humane writer with an extraordinary vocabulary and a sparkling sense of fun. Whether he is quoting from obscure medical texts or analysing scabrous diaries, dishing the dirt on long-dead bigwigs or evoking sympathy for human suffering, his grasp is masterly and his erudition appealing. I wish I could read it again for the first time. In this startlingly brilliant sequel to the prize-winning ENLIGHTENMENT Roy Porter completes his lifetime's work, offering a magical, enthusiastic and charming account of the writings of some of the most attractive figures ever to write English."
+  }
+]

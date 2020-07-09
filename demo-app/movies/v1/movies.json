@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "date": "2013-01-12T00:00:00Z",
+    "title": "Frozen",
+    "director": "JENNIFER LEE, CHRIS BUCK",
+    "genre": "Kids",
+    "thumbnail": "img/frozen.jpg",
+    "summary": "When the newly crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister Anna teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition."
+  },
+  {
+    "id": 2,
+    "date": "2015-02-05T00:00:00Z",
+    "title": "Inside Out",
+    "director": "PETE DOCTER",
+    "genre": "Kids",
+    "thumbnail": "img/inside-out.jpg",
+    "summary": "After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school."
+  },
+  {
+    "id": 3,
+    "date": "2016-02-21T00:00:00Z",
+    "title": "Moana",
+    "director": "RON CLEMENTS, JOHN MUSKER",
+    "genre": "Kids",
+    "thumbnail": "img/moana.jpg",
+    "summary": "In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches Moana's island, she answers the Ocean's call to seek out the Demigod to set things right."
+  }
+]

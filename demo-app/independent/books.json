@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "date": "2006-01-12T00:00:00Z",
+    "title": "The Technology of Ancient Japan",
+    "author": "MEG GREENE",
+    "genre": "Technology",
+    "thumbnail": "img/tech-jpn.jpg",
+    "summary": "A beautifully designed and lavishly illustrated account of how a great country developed its own unique and resourceful techniques that ultimately influenced and impacted art, literature, architecture, weaponry, cultivation, and textile production. This title discusses how the japanese borrowed and improved upon technology from China and Korea, and provides an excellent introduction to the richness of a great culture. Supports history-social science content standards mandating student understanding of the origins and influence of agricultural, technological, and commercial developments in key ancient civilizations. Broadens student understanding of the relationship among science, technology, and society by highlighting how major scientific and mathematical discoveries and technological innovations have affected societies throughout history."
+  },
+  {
+    "id": 2,
+    "date": "2019-02-21T00:00:00Z",
+    "title": "Into the Water",
+    "author": "Paula Hawkins",
+    "genre": "Thriller",
+    "thumbnail": "img/into-water.jpg",
+    "summary": "A single mother turns up dead at the bottom of the river that runs through town. Earlier in the summer, a vulnerable teenage girl met the same fate. They are not the first women lost to these dark waters, but their deaths disturb the river and its history, dredging up secrets long submerged. Left behind is a lonely fifteen-year-old girl. Parentless and friendless, she now finds herself in the care of her mother's sister, a fearful stranger who has been dragged back to the place she deliberately ran from--a place to which she vowed she'd never return. With the same propulsive writing and acute understanding of human instincts that captivated millions of readers around the world in her explosive debut thriller, The Girl on the Train, Paula Hawkins delivers an urgent, twisting, deeply satisfying read that hinges on the deceptiveness of emotion and memory, as well as the devastating ways that the past can reach a long arm into the present. Beware a calm surface--you never know what lies beneath."
+  }
+]

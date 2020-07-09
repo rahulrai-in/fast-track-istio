@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "date": "1964-01-12T00:00:00Z",
+    "title": "A Guide to Old English",
+    "thumbnail": "",
+    "author": "BRUCE MITCHELL",
+    "genre": "Language"
+  },
+  {
+    "id": 2,
+    "date": "1595-02-05T00:00:00Z",
+    "title": "Romeo and Juliet",
+    "thumbnail": "",
+    "author": "WILLIAM SHAKESPEARE",
+    "genre": "Romance"
+  },
+  {
+    "id": 3,
+    "date": "1390-02-21T00:00:00Z",
+    "title": "The Canterbury Tales",
+    "thumbnail": "",
+    "author": "GEOFFREY CHAUCER",
+    "genre": "Fiction"
+  },
+  {
+    "id": 4,
+    "date": "1606-03-12T00:00:00Z",
+    "title": "Macbeth",
+    "thumbnail": "",
+    "author": "WILLIAM SHAKESPEARE",
+    "genre": "Play"
+  },
+  {
+    "id": 5,
+    "date": "2020-04-01T00:00:00Z",
+    "title": "Anglo Saxon Poetic Records",
+    "thumbnail": "",
+    "author": "GEORGE PHILIP KRAPP",
+    "genre": "Poem"
+  }
+]

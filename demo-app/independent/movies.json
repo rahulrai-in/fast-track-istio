@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "date": "2019-01-12T00:00:00Z",
+    "title": "Avengers Endgame",
+    "director": "Marvel Studios",
+    "genre": "Action",
+    "thumbnail": "img/avengers.jpg",
+    "summary": "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe."
+  },
+  {
+    "id": 2,
+    "date": "2010-02-05T00:00:00Z",
+    "title": "Inside Job",
+    "director": "CHARLES FERGUSON",
+    "genre": "Documentary",
+    "thumbnail": "img/inside-job.jpg",
+    "summary": "Takes a closer look at what brought about the 2008 financial meltdown."
+  },
+  {
+    "id": 3,
+    "date": "2020-02-21T00:00:00Z",
+    "title": "Sonic The Hedgehog",
+    "director": "Jeff Fowler",
+    "genre": "Action",
+    "thumbnail": "img/sonic.jpg",
+    "summary": "After discovering a small, blue, fast hedgehog, a small-town police officer must help him defeat an evil genius who wants to do experiments on him."
+  }
+]

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f271c4ad-a1a5-4740-9499-216ed4688444" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ui/html/rent-movie.page.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/web/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/web/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/web/helpers.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/web/helpers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/web/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/web/routes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/web/templates.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/web/templates.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/models/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/models/models.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/html/books.page.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/ui/html/books.page.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/html/independent.page.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/ui/html/independent.page.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/html/legacy.page.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/ui/html/legacy.page.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/html/movies.page.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/ui/html/movies.page.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/html/rent-book.page.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/ui/html/rent-book.page.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/ui/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../books/Controllers/BooksController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../books/Controllers/BooksController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../independent/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../independent/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../independent/movies.json" beforeDir="false" afterPath="$PROJECT_DIR$/../independent/movies.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies/v1/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../movies/v1/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies/v1/movies.json" beforeDir="false" afterPath="$PROJECT_DIR$/../movies/v1/movies.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies/v2/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../movies/v2/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../movies/v2/movies.json" beforeDir="false" afterPath="$PROJECT_DIR$/../movies/v2/movies.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1dlGa3lL5UheIuC31FiIm1Uln8E" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="GO_FMT" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ui/html" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\fast-track-istio\demo-app\book-club\ui\html" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.BUILD+RUN">
+    <configuration name="BUILD+RUN" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="tour-guide" />
+      <working_directory value="$PROJECT_DIR$" />
+      <parameters value="-addr=:9999" />
+      <envs>
+        <env name="booksServiceUri" value="http://localhost:5000" />
+        <env name="independentServiceUri" value="http://localhost:7000" />
+        <env name="moviesServiceUri" value="http://localhost:8080" />
+      </envs>
+      <kind value="DIRECTORY" />
+      <package value="fast-track-istio/tour-guide/cmd" />
+      <directory value="$PROJECT_DIR$/cmd/web" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="Go Build.BUILD+RUN" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.BUILD+RUN" />
+        <item itemvalue="Docker.Dockerfile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f271c4ad-a1a5-4740-9499-216ed4688444" name="Default Changelist" comment="" />
+      <created>1592992325791</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592992325791</updated>
+    </task>
+    <task id="LOCAL-00001" summary="removed .idea folder from root">
+      <created>1593410540852</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593410540852</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fixed path error">
+      <created>1593606761161</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593606761161</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixed execution on goland">
+      <created>1593606935495</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1593606935495</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[wip]: read result from books api">
+      <created>1594038467484</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594038467485</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="removed .idea folder from root" />
+    <MESSAGE value="fixed path error" />
+    <MESSAGE value="fixed execution on goland" />
+    <MESSAGE value="[wip]: read result from books api" />
+    <option name="LAST_COMMIT_MESSAGE" value="[wip]: read result from books api" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="664" y="64" key="#Dockerfile" timestamp="1593000409087">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="664" y="64" key="#Dockerfile/0.0.1920.1040@0.0.1920.1040" timestamp="1593000409087" />
+    <state x="552" y="160" key="#Plugins" timestamp="1593828625899">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="160" key="#Plugins/0.0.1920.1040@0.0.1920.1040" timestamp="1593828625899" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594292498310">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594292498310" />
+    <state width="583" height="482" key="DebuggerActiveHint" timestamp="1594270920607">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="583" height="482" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1594270920607" />
+    <state x="825" y="182" width="640" height="805" key="EnvironmentVariablesDialog" timestamp="1594268695175">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="825" y="182" width="640" height="805" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594268695175" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1593606881266">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593606881266" />
+    <state width="1876" height="230" key="GridCell.Tab.0.bottom" timestamp="1594293831300">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="230" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594293831300" />
+    <state width="1876" height="230" key="GridCell.Tab.0.center" timestamp="1594293831299">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="230" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594293831299" />
+    <state width="1876" height="230" key="GridCell.Tab.0.left" timestamp="1594293831299">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="230" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594293831299" />
+    <state width="1876" height="230" key="GridCell.Tab.0.right" timestamp="1594293831300">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="230" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594293831300" />
+    <state width="1876" height="230" key="GridCell.Tab.1.bottom" timestamp="1594293831300">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="230" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594293831300" />
+    <state width="1876" height="230" key="GridCell.Tab.1.center" timestamp="1594293831300">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="230" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594293831300" />
+    <state width="1876" height="230" key="GridCell.Tab.1.left" timestamp="1594293831300">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="230" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594293831300" />
+    <state width="1876" height="230" key="GridCell.Tab.1.right" timestamp="1594293831300">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="230" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594293831300" />
+    <state x="540" y="254" key="IDE.errors.dialog" timestamp="1594255402669">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="254" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594255402669" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1594163505033">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1594163505033" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1594117716798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1594117716798" />
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2" timestamp="1594038479715">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594038479715" />
+    <state x="725" y="252" key="com.goide.refactor.move.GoMoveDeclarationDialog" timestamp="1594270647771">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="725" y="252" key="com.goide.refactor.move.GoMoveDeclarationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594270647771" />
+  </component>
+</project>

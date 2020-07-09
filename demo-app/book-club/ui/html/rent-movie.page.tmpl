@@ -1,0 +1,37 @@
+{{template "base" .}}
+
+{{define "title"}}Rent-Movie{{ end }}
+
+{{define "main"}}
+    <h2>Movie Check Out</h2>
+    {{range .Error}}
+        <label class='error'>{{.}}</label> <br/>
+    {{end}}
+    <label class='info'>Source: {{.MoviesTemplateData.RequestMetadata.Source}}</label>
+    <label class='info'>Duration: {{.MoviesTemplateData.RequestMetadata.RequestDuration}}</label> <br/>
+    {{with .MoviesTemplateData.Movie}}
+        <div style="text-align: center">
+            {{ if .Thumbnail }}
+                <img src="data:image/png;base64, {{.Thumbnail}}" alt="{{.Title}}"/>
+            {{else}}
+                <img src="https://via.placeholder.com/150" alt="{{.Title}}"/>
+            {{end}}
+        </div>
+        <br/>
+        <div class="snippet">
+            <div class="metadata">
+                #{{.Id}} <strong>{{.Title}}</strong>
+                <p>
+                    by {{titleCase .Director}}
+                </p>
+            </div>
+            <pre><code>{{.Summary}}</code></pre>
+            <div class="metadata">
+                <time>Genre: {{.Genre}}</time>
+                <time>Added On: {{humanDate .Date}}</time>
+            </div>
+        </div>
+    {{else}}
+        <p>No movie</p>
+    {{end}}
+{{ end }}

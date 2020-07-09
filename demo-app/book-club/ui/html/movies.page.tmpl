@@ -1,0 +1,36 @@
+{{template "base" .}}
+
+{{define "title"}}Movies{{ end }}
+
+{{define "main"}}
+    <h2>Movies</h2>
+    {{range .Error}}
+        <label class='error'>{{.}}</label> <br/>
+    {{end}}
+    <label class='info'>Source: {{.MoviesTemplateData.RequestMetadata.Source}}</label>
+    <label class='info'>Duration: {{.MoviesTemplateData.RequestMetadata.RequestDuration}}</label> <br/>
+    {{if .MoviesTemplateData.Movies}}
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Director</th>
+                <th>Genre</th>
+                <th>Thumbnail</th>
+                <th>Date Added</th>
+            </tr>
+            {{range .MoviesTemplateData.Movies}}
+                <tr>
+                    <td>
+                        <a href="/rent-movie?id={{.Id}}&type=book&src={{$.MoviesTemplateData.RequestMetadata.InvokedBy}}">{{.Title}}</a>
+                    </td>
+                    <td>{{titleCase .Director}}</td>
+                    <td>{{.Genre}}</td>
+                    <td><img src="data:image/png;base64, {{.Thumbnail}}" alt="{{.Title}}"/></td>
+                    <td>{{humanDate .Date}}</td>
+                </tr>
+            {{end}}
+        </table>
+    {{else}}
+        <p>No movies</p>
+    {{end}}
+{{ end }}
