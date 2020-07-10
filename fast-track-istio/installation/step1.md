@@ -1,17 +1,9 @@
-The Katacoda `terminal` UI Layout provides a full Terminal experience.
+## Start the cluster
 
-# Index.json
+Your shell is currently running inside a Kubernetes cluster. To start the cluster, we are required to run a Katacoda script. This will launch a two-node Kubernetes cluster with one master and one node.
 
-Example:
+`launch.sh`{{execute}}
 
-<pre>
-"environment": {
-    "uilayout": "terminal"
-},
-</pre>
+#### Health Check
 
-# Helper Functionality
-
-`echo "Running a command"`{{execute}}
-
-Other Terminal and Markdown functionality is available at https://katacoda.com/scenario-examples/scenarios/markdown-extensions
+Once started, you can get the status of the cluster with `kubectl cluster-info`{{execute}}

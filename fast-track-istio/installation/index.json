@@ -1,21 +1,44 @@
 {
+  "icon": "fa-istio",
+  "authenticated": false,
   "noindex": true,
-  "title": "Installation",
-  "description": "Learn to install Istio on your Kubernetes cluster",
   "details": {
     "steps": [
       {
-        "title": "Some title",
+        "title": "Launch Kubernetes Cluster",
+        "code": "set-env.sh",
         "text": "step1.md"
+      },
+      {
+        "title": "Deploy Istio",
+        "courseData": "ensure-configured.sh",
+        "text": "step2.md"
       }
-    ]
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "courseBase.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
   },
   "environment": {
-    "hideintro": true,
-    "hidefinish": true,
-    "uilayout": "editor-terminal"
+    "showdashboard": true,
+    "dashboard": "Dashboard",
+    "uilayout": "editor-terminal",
+    "showide": true,
+    "idePort": 23000,
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n",
+    "uidependencies": [
+      "/socket.io/socket.io.js",
+      "/javascripts/term.js",
+      "/javascripts/terminal-application.js"
+    ]
   },
   "backend": {
-    "imageid": "kubernetes-cluster-running"
+    "port": 80,
+    "dockerimage": "istio"
   }
 }
