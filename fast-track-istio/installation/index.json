@@ -25,17 +25,13 @@
     }
   },
   "environment": {
-    "showdashboard": true,
-    "dashboard": "Dashboard",
-    "uilayout": "editor-terminal",
     "showide": true,
     "idePort": 23000,
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n",
-    "uidependencies": [
-      "/socket.io/socket.io.js",
-      "/javascripts/term.js",
-      "/javascripts/terminal-application.js"
-    ]
+    "uilayout": "terminal",
+    "dashboard": "Dashboard",
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mInteractive Bash Terminal.\u001b[m\r\n"
   },
   "backend": {
     "port": 80,
