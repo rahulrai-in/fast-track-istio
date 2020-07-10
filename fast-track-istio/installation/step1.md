@@ -12,6 +12,10 @@ Let's now check the status of our cluster by executing this command: `kubectl cl
 
 Let's download the scripts that we will use in this workshop from GitHub.
 
-`ssh root@host01 "git clone https://github.com/rahulrai-in/fast-track-istio.git; mv fast-track-istio/scripts myworkshop; rm -rf fast-track-istio"`{{execute}}
+`git clone https://github.com/rahulrai-in/fast-track-istio.git; mv fast-track-istio/scripts my-workshop-files; rm -rf fast-track-istio`{{execute}}
+
+In the editor window, you will now find a folder named _my-workshop-files_ that contains the scripts that we will use in this workshop.
 
 ## Install Istio
+
+Let's now install Istio on our cluster.

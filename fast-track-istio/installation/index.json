@@ -5,7 +5,7 @@
   "details": {
     "steps": [
       {
-        "title": "Launch Kubernetes Cluster",
+        "title": "Prepare Kubernetes Cluster",
         "text": "step1.md"
       },
       {
