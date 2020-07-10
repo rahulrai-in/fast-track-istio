@@ -16,15 +16,13 @@
       }
     ],
     "intro": {
-      "text": "intro.md",
       "courseData": "course-base.sh",
       "credits": ""
-    },
-    "finish": {
-      "text": "finish.md"
     }
   },
   "environment": {
+    "hideintro": true,
+    "hidefinish": true,
     "uilayout": "editor-terminal",
     "dashboard": "Dashboard",
     "showdashboard": true,
