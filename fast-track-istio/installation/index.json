@@ -6,19 +6,13 @@
     "steps": [
       {
         "title": "Launch Kubernetes Cluster",
-        "code": "set-env.sh",
         "text": "step1.md"
       },
       {
         "title": "Deploy Istio",
-        "courseData": "ensure-configured.sh",
         "text": "step2.md"
       }
-    ],
-    "intro": {
-      "courseData": "course-base.sh",
-      "credits": ""
-    }
+    ]
   },
   "environment": {
     "hideintro": true,
