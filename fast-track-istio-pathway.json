@@ -3,7 +3,7 @@
   "description": "Explore the features of the Istio service mesh by strategically deploying a simple microservices application to a Kubernetes cluster.",
   "courses": [
     {
-      "course_id": "fast-track-istio-1-installation",
+      "course_id": "installation",
       "title": "Scenario with Terminal UI",
       "description": "Katacoda Scenario Example"
     }
