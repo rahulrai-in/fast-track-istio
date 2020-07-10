@@ -1,0 +1,12 @@
+{
+  "title": "Katacoda UI Layouts Example",
+  "description": "Example of different Katacoda UI Layouts. Also, an example of creating a Katacoda Course!",
+  "icon": "fa-katacoda",
+  "courses": [
+    {
+      "course_id": "fast-track-istio-installation",
+      "title": "Scenario with Terminal UI",
+      "description": "Katacoda Scenario Example"
+    }
+  ]
+}

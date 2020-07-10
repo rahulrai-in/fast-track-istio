@@ -1,7 +1,7 @@
 {
-  "title": "Installing Istio",
-  "description": "Install Istio to your Kubernetes cluster",
-  "difficulty": "Intermediate",
+  "title": "Install Istio",
+  "description": "Learn to install Istio on your Kubernetes cluster",
+  "difficulty": "Beginner",
   "time": "15 minutes",
   "details": {
     "steps": [
