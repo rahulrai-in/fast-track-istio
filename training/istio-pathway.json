@@ -1,0 +1,13 @@
+{
+  "title": "Fast Track Istio",
+  "description": "Fast Track Istio workshop for NDC Melbourne 2020.",
+  "private": false,
+  "icon": "fa-openshift",
+  "courses": [
+    {
+      "pathway_id": "rahulrai",
+      "course_id": "install-istio",
+      "id": "install-istio"
+    }
+  ]
+}
