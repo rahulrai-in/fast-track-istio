@@ -26,11 +26,9 @@
   },
   "environment": {
     "showide": true,
-    "idePort": 23000,
     "uilayout": "terminal",
     "dashboard": "Dashboard",
     "showdashboard": true,
-    "uilayout": "terminal",
     "uimessage1": "\u001b[32mInteractive Bash Terminal.\u001b[m\r\n"
   },
   "backend": {
