@@ -31,7 +31,6 @@
     "uimessage1": "\u001b[32mInteractive Bash Terminal.\u001b[m\r\n"
   },
   "backend": {
-    "port": 80,
-    "dockerimage": "istio"
+    "imageid": "kubernetes-cluster:1.18"
   }
 }
