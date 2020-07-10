@@ -1,0 +1,21 @@
+{
+  "noindex": true,
+  "title": "Installation",
+  "description": "Learn to install Istio on your Kubernetes cluster",
+  "details": {
+    "steps": [
+      {
+        "title": "",
+        "text": "step1.md"
+      }
+    ]
+  },
+  "environment": {
+    "hideintro": true,
+    "hidefinish": true,
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}
