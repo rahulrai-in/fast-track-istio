@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: fast-track-istio 
+  labels:
+    istio-injection: enabled
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: book-club-gateway
+  namespace: fast-track-istio
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - port:
+        number: 80
+        name: http-book-club-gateway
+        protocol: HTTP
+      hosts:
+        - book-club.fast-track-istio.io
