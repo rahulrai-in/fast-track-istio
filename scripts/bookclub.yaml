@@ -25,10 +25,10 @@ kind: Service
 metadata:
   name: bookclub
   labels:
-    run: bookclub
+    app: bookclub
 spec:
   ports:
   - port: 8080
     protocol: TCP
   selector:
-    run: bookclub
+    app: bookclub
