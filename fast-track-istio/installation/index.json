@@ -1,0 +1,28 @@
+{
+  "icon": "fa-istio",
+  "authenticated": false,
+  "noindex": true,
+  "details": {
+    "steps": [
+      {
+        "title": "Prepare Kubernetes Cluster",
+        "text": "step1.md"
+      },
+      {
+        "title": "Deploy Istio",
+        "text": "step2.md"
+      }
+    ]
+  },
+  "environment": {
+    "hideintro": true,
+    "hidefinish": true,
+    "uilayout": "editor-terminal",
+    "dashboard": "Dashboard",
+    "showdashboard": true,
+    "uimessage1": "\u001b[32mInteractive Bash Terminal.\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}
