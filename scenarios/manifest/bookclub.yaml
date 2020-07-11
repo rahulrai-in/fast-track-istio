@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: bookclub
   labels:
-    app: web
+    app: bookclub
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: web
+      app: bookclub
   template:
     metadata:
       labels:
-        app: web
+        app: bookclub
     spec:
       containers:
         - name: bookclub
@@ -32,3 +32,4 @@ spec:
     protocol: TCP
   selector:
     app: bookclub
+  type: NodePort
