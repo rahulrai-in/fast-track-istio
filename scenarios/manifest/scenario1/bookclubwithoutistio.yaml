@@ -3,18 +3,18 @@ kind: Deployment
 metadata:
   name: bookclub
   labels:
-    app: web
+    app: bookclub
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: web
+      app: bookclub
   template:
     metadata:
       annotations:
         sidecar.istio.io/inject: "true"
       labels:
-        app: web
+        app: bookclub
     spec:
       containers:
         - name: bookclub
