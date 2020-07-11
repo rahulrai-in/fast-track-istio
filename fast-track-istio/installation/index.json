@@ -23,6 +23,7 @@
     "uimessage1": "\u001b[32mInteractive Bash Terminal.\u001b[m\r\n"
   },
   "backend": {
+    "port": 30001,
     "imageid": "kubernetes-cluster-running:1.18"
   }
 }

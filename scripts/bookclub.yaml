@@ -8,11 +8,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: web
+      app: book-club
   template:
     metadata:
       labels:
-        app: web
+        app: book-club
     spec:
       containers:
         - name: book-club
@@ -35,7 +35,7 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - nodePort: 80
+    - nodePort: 30001
       port: 8080
       targetPort: 8080
       protocol: TCP
