@@ -53,4 +53,4 @@ def img_toBase64(item):
             image_file.read()).decode(ENCODING)
 
 
-app.run(host="0.0.0.0", port="7000")
+app.run(host="0.0.0.0", port="8080")

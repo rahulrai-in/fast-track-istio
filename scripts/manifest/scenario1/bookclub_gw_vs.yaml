@@ -1,0 +1,32 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: book-club-gateway
+  namespace: fast-track-istio
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - port:
+        number: 80
+        name: http-book-club-gateway
+        protocol: HTTP
+      hosts:
+        - "*"
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: book-club-vservice
+  namespace: fast-track-istio
+spec:
+  hosts:
+    - "*"
+  gateways:
+    - book-club-gateway
+  http:
+    - route:
+        - destination:
+            host: bookclub
+            port:
+              number: 8080

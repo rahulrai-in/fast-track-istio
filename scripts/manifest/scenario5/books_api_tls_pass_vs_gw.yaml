@@ -1,0 +1,38 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: books-api-gateway
+  namespace: fast-track-istio
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - port:
+        number: 443
+        name: https-books-api-gateway
+        protocol: HTTPS
+      tls:
+        mode: PASSTHROUGH
+      hosts:
+        - books.fast-track-istio.io
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: books-api-vservice
+  namespace: fast-track-istio
+spec:
+  hosts:
+    - books.fast-track-istio.io
+  gateways:
+    - books-api-gateway
+  tls:
+    - match:
+        - port: 443
+          sniHosts:
+            - books.fast-track-istio.io
+      route:
+        - destination:
+            host: books-api-service
+            port:
+              number: 4000
