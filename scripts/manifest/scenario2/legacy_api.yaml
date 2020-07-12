@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: legacy-api
-          image: fasttrackistio/legacy:1.0.0
+          image: fasttrackistio/legacy-books:1.0.0
           imagePullPolicy: IfNotPresent
           resources:
             limits:
