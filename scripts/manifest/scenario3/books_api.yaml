@@ -1,0 +1,59 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: fast-track-istio
+  labels:
+    istio-injection: enabled
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: books-api-deployment
+  namespace: fast-track-istio
+spec:
+  selector:
+    matchLabels:
+      app: books-api
+  replicas: 2
+  minReadySeconds: 1
+  progressDeadlineSeconds: 600
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        app: books-api
+    spec:
+      containers:
+        - name: books-api
+          image: fasttrackistio/books:1.0.0
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 1024Mi
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          ports:
+            - name: http-books-api
+              containerPort: 3001
+          env:
+            - name: LEGACY_API
+              value: "http://legacy-api-service"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: books-api-service
+  namespace: fast-track-istio
+spec:
+  selector:
+    app: books-api
+  ports:
+    - name: http-books-api-service
+      port: 80
+      targetPort: http-books-api

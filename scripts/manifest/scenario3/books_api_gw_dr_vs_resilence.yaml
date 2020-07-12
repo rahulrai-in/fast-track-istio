@@ -1,0 +1,55 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: books-api-gateway
+  namespace: fast-track-istio
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - port:
+        number: 80
+        name: http-books-api-gateway
+        protocol: HTTP
+      hosts:
+        - books.fast-track-istio.io
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: books-api-vservice
+  namespace: fast-track-istio
+spec:
+  hosts:
+    - books.fast-track-istio.io
+  gateways:
+    - books-api-gateway
+  http:
+    - route:
+        - destination:
+            host: books-api-service
+            port:
+              number: 80
+      timeout: 30s
+      retries:
+        attempts: 10
+        perTryTimeout: 3s
+        retryOn: "5xx,connect-failure,refused-stream"
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: books-api-destination-rule
+  namespace: fast-track-istio
+spec:
+  host: books-api-service
+  trafficPolicy:
+    connectionPool:
+      http:
+        http1MaxPendingRequests: 1
+        maxRequestsPerConnection: 1
+    outlierDetection:
+      consecutiveErrors: 1
+      interval: 1s
+      baseEjectionTime: 3m
+      maxEjectionPercent: 100
