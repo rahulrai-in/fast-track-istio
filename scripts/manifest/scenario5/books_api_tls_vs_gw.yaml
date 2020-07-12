@@ -39,4 +39,4 @@ spec:
         - destination:
             host: books-api-service
             port:
-              number: 80
+              number: 4000

@@ -33,7 +33,7 @@ spec:
         - destination:
             host: movies-api-service
             port:
-              number: 80
+              number: 3000
             subset: v1
 ---
 apiVersion: networking.istio.io/v1alpha3
@@ -55,5 +55,5 @@ spec:
         - destination:
             host: movies-api-service
             port:
-              number: 80
+              number: 3000
             subset: v1

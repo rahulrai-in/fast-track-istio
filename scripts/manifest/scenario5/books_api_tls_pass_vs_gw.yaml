@@ -35,4 +35,4 @@ spec:
         - destination:
             host: books-api-service
             port:
-              number: 443
+              number: 4000

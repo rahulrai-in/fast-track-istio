@@ -1,62 +1,51 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: fast-track-istio
+  name: fast-track-istio 
   labels:
     istio-injection: enabled
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: books-api-deployment
-  namespace: fast-track-istio
+  name: books
+  namespace: fast-track-istio 
+  labels:
+    app: books
 spec:
+  replicas: 2
   selector:
     matchLabels:
-      app: books-api
-  replicas: 2
-  minReadySeconds: 1
-  progressDeadlineSeconds: 600
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
+      app: books
   template:
     metadata:
       labels:
-        app: books-api
+        app: books
     spec:
       containers:
-        - name: books-api
+        - name: books
           image: fasttrackistio/books:1.0.0
-          imagePullPolicy: IfNotPresent
-          resources:
-            limits:
-              cpu: 1000m
-              memory: 1024Mi
-            requests:
-              cpu: 100m
-              memory: 100Mi
           ports:
             - name: http-books-api
-              containerPort: 3001
+              containerPort: 80
           env:
-            - name: LEGACY_API
-              value: "http://legacy-api-service"
+            - name: LegacyServiceUri
+              value: "http://legacy-api-service.fast-track-istio.svc.cluster.local:7000"
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: books-api-service
-  namespace: fast-track-istio
+  namespace: fast-track-istio 
+  labels:
+    app: books
 spec:
-  selector:
-    app: books-api
   ports:
-    - name: http-books-api-service
-      port: 80
-      targetPort: http-books-api
+  - port: 4000
+    protocol: TCP
+    targetPort: http-books-api
+  selector:
+    app: books
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
@@ -73,4 +62,4 @@ spec:
         - destination:
             host: books-api-service
             port:
-              number: 80
+              number: 4000

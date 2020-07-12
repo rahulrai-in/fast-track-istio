@@ -33,5 +33,5 @@ spec:
         - destination:
             host: movies-api-service
             port:
-              number: 80
+              number: 3000
             subset: v1
