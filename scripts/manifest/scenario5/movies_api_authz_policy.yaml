@@ -1,0 +1,35 @@
+apiVersion: rbac.istio.io/v1alpha1
+kind: RbacConfig
+metadata:
+  name: default
+  namespace: istio-system
+spec:
+  mode: ON_WITH_INCLUSION
+  inclusion:
+    services:
+      - movies-api-service.fast-track-istio.svc.cluster.local
+---
+apiVersion: rbac.istio.io/v1alpha1
+kind: ServiceRole
+metadata:
+  name: movies-api-viewer
+  namespace: fast-track-istio
+spec:
+  rules:
+    - services:
+        - movies-api-service.fast-track-istio.svc.cluster.local
+      methods:
+        - GET
+---
+apiVersion: rbac.istio.io/v1alpha1
+kind: ServiceRoleBinding
+metadata:
+  name: movies-api-viewer-binding
+  namespace: fast-track-istio
+spec:
+  subjects:
+    - properties:
+        request.auth.claims[role]: "learner"
+  roleRef:
+    kind: ServiceRole
+    name: movies-api-viewer
