@@ -1,6 +1,6 @@
 FROM golang:1.13-alpine
 
-MAINTAINER "Rahul Rai <rahul@rahul-rai.com>"
+LABEL maintainer="Rahul Rai <rahul@rahul-rai.com> & Tarun Pabbi <tarun.pabbi@outlook.com>"
 
 WORKDIR /go/src
 
