@@ -14,6 +14,7 @@ FROM build AS publish
 RUN dotnet publish "books.csproj" -c Release -o /app/publish
 
 FROM base AS final
+LABEL maintainer="Rahul Rai <rahul@rahul-rai.com> & Tarun Pabbi <tarun.pabbi@outlook.com>"
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "books.dll"]
