@@ -35,7 +35,7 @@ spec:
             - name: booksServiceUri
               value: "http://books-api-service.fast-track-istio.svc.cluster.local:4000"
             - name: independentServiceUri
-              value: "http://independentServiceUri.fast-track-istio.svc.cluster.local"
+              value: "http://20.193.63.122:8080/"
 ---
 apiVersion: v1
 kind: Service
