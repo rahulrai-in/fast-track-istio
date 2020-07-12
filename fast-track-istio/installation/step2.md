@@ -1,18 +1,37 @@
-## Start the cluster
+## Install Istio
 
-Lastly, we will clone a the Vote App Github repo and run the application on the cluster.
+You can find platform-specific installation instructions for Istio [here](https://istio.io/latest/docs/setup/install).
 
-First, lets clone the Github repo. git clone https://github.com/dockersamples/example-voting-app.git{{execute}}
-Now lets change to that directory and deploy the environment.
-cd example-voting-app{{execute}}
-This creates a new namespace called vote. kubectl create namespace vote{{execute}}
-This will deploy all of the YAML configurations in the k8s-specification folder. kubectl apply -f k8s-specifications{{execute}}
-Now lets monitor the deployment status of the Vote components.
+The first component that we need to install is the Istio CLI, known as `istioctl`. To install `istioctl`, execute the following command.
 
-watch -n .5 kubectl get pods,deploy,svc -o wide -n vote{{execute}}
-Once they are all running, press "CTRL+C" to exit the watch.
+`curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.6.5 sh -;cd istio-1.6.5;export PATH=$PWD/bin:$PATH`{{execute}}
 
-Lets view the app, vote on a pet, then view the results.
+Next, install the Istio operator with the following command.
 
-To vote, click this link: https://[[HOST_SUBDOMAIN]]-31000-[[KATACODA_HOST]].environments.katacoda.com/
-To view results, click this link: https://[[HOST_SUBDOMAIN]]-31001-[[KATACODA_HOST]].environments.katacoda.com/
+`istioctl operator init`{{execute}}
+
+Let's now create a namespace for Istio resources with the following command.
+
+`kubectl create ns istio-system`{{execute}}
+
+The following command will
+
+`kubectl apply -f - <<EOF
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+metadata:
+  namespace: istio-system
+  name: example-istiocontrolplane
+spec:
+  profile: demo
+EOF`{{execute}}
+
+Let's check the health of Istio control plane services now available on our cluster.
+
+`kubectl get pods -n istio-system`{{execute}}
+
+You can check the services deployed by the operator as well by executing the following command.
+
+`kubectl get svc -n istio-system`{{execute}}
+
+
