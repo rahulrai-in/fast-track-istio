@@ -5,7 +5,7 @@ metadata:
   namespace: fast-track-istio
 spec:
   hosts:
-    - raw.githubusercontent.com
+    - externalbookclub.azurewebsites.net
   location: MESH_EXTERNAL
   ports:
     - number: 443

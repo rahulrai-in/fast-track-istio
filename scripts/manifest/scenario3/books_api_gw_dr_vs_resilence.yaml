@@ -21,7 +21,7 @@ metadata:
   namespace: fast-track-istio
 spec:
   hosts:
-    - books.fast-track-istio.io
+    - "books.fast-track-istio.io"
   gateways:
     - books-api-gateway
   http:
@@ -29,7 +29,7 @@ spec:
         - destination:
             host: books-api-service
             port:
-              number: 80
+              number: 4000
       timeout: 30s
       retries:
         attempts: 10

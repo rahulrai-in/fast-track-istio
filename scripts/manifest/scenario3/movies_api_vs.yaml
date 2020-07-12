@@ -5,10 +5,10 @@ metadata:
   namespace: fast-track-istio
 spec:
   hosts:
-    - movies.fast-track-istio.io
+    - "movies.fast-track-istio.io"
   http:
     - route:
         - destination:
             host: movies-api-service
             port:
-              number: 80
+              number: 3000

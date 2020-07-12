@@ -33,13 +33,13 @@ spec:
         - destination:
             host: movies-api-service
             port:
-              number: 80
+              number: 3000
             subset: v1
     - route:
         - destination:
             host: movies-api-service
             port:
-              number: 80
+              number: 3000
             subset: v1
       fault:
         delay:

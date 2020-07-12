@@ -29,13 +29,13 @@ spec:
         - destination:
             host: movies-api-service
             port:
-              number: 6000
+              number: 3000
             subset: v1
           weight: 10
         - destination:
             host: movies-api-service
             port:
-              number: 6000
+              number: 3000
             subset: v2
           weight: 90
 ---
