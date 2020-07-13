@@ -6,7 +6,9 @@ Your shell is currently running inside a Kubernetes cluster in the stopped state
 
 ## Health check
 
-Let's now check the status of our cluster by executing this command: `kubectl cluster-info`{{execute}}
+Let's now check the status of our cluster by executing the following command.
+
+`kubectl cluster-info`{{execute}}
 
 ## Download the source code
 

@@ -14,7 +14,7 @@ Let's now create a namespace for Istio resources with the following command.
 
 `kubectl create ns istio-system`{{execute}}
 
-The following command will
+The following command will install all the components of Istio (core and optional) on your cluster.
 
 `kubectl apply -f - <<EOF
 apiVersion: install.istio.io/v1alpha1
@@ -26,12 +26,14 @@ spec:
   profile: demo
 EOF`{{execute}}
 
-Let's check the health of Istio control plane services now available on our cluster.
-
-`kubectl get pods -n istio-system`{{execute}}
-
-You can check the services deployed by the operator as well by executing the following command.
+You can check the services deployed by the operator by executing the following command.
 
 `kubectl get svc -n istio-system`{{execute}}
 
+Let's check the health of Istio control plane resources (pods, deployment, services) deployed on our cluster.
 
+watch -n .5 kubectl get pods,deploy,svc -o wide -n istio-system{{execute}}
+
+Once all the resources are running, press "CTRL+C" to exit the watch.
+
+Let's explore how we can customize the installation next.
