@@ -1,7 +1,10 @@
 launch.sh
-curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.6.5 sh -
-cd istio-1.6.5
-export PATH=$PWD/bin:$PATH
+
+# Install istioctl
+curl -sL https://istio.io/downloadIstioctl | sh -
+export PATH=$PATH:$HOME/.istioctl/bin
+
+# Install Istio operator
 istioctl operator init
 kubectl create ns istio-system
 kubectl apply -f - <<EOF

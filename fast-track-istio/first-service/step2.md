@@ -1,37 +1,13 @@
-You can find platform-specific installation instructions for Istio [here](https://istio.io/latest/docs/setup/install).
+You can define custom labels for all Kubernetes objects, which are essentially key-value pairs. Istio relies on a specific label named `istio-injection` to decide the namespace on which the Envoy proxies are applied. This label supports two values. Setting the value of the label to _enabled_ will insturct Istio to automatically deploy sidecars for all the pods of your service. On the other hand, setting this value to _disabled_ means that Istio will not inject sidecars automatically; however, it won’t affect the services within the namespace that have sidecars attached to them.
 
-The first component that we need to install is the Istio CLI, known as `istioctl`. To install `istioctl`, execute the following command.
+The journey to virtualization in enterprises is an incremental process. This means that in most of the cases, organizations would want to gradually migrate their existing workloads running on Kubernetes to the service mesh. In such cases, you will have to manually inject Envoy sidecars to existing services.
 
-`curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.6.5 sh -;cd istio-1.6.5;export PATH=$PWD/bin:$PATH`{{execute}}
+To simulate this scenario, let’s deploy a service to our cluster with automatic sidecar injection turned off. Explere the specification in the `book-club-without-istio.yaml` file that we will use to deploy a stateless service to our cluster.
 
-Next, install the Istio operator with the following command.
+Let's now deploy this service to our cluster with the following command.
 
-`istioctl operator init`{{execute}}
+`kubectl apply -f my-workshop/book-club-without-istio.yaml`{{execute}}
 
-Let's now create a namespace for Istio resources with the following command.
+Once deployed, you can check the containers created in the pods of this service with the following command.
 
-`kubectl create ns istio-system`{{execute}}
-
-The following command will install only the Istio daemon-*istiod*  on your cluster.
-
-`kubectl apply -f - <<EOF
-apiVersion: install.istio.io/v1alpha1
-kind: IstioOperator
-metadata:
-  namespace: istio-system
-  name: example-istiocontrolplane
-spec:
-  profile: minimum
-EOF`{{execute}}
-
-You can check the services deployed by the operator by executing the following command.
-
-`kubectl get svc -n istio-system`{{execute}}
-
-Let's check the health of Istio control plane resources (pods, deployment, services) deployed on our cluster.
-
-`watch -n .5 kubectl get pods,deploy,svc -o wide -n istio-system`{{execute}}
-
-Once all the resources are running, press "CTRL+C" to exit the watch.
-
-Let's explore how we can customize the installation next.
+`kubectl get pods --selector app=bookclub -n micro-shake-factory -o jsonpath={.items[*].spec.containers[*].name}`{{execute}}

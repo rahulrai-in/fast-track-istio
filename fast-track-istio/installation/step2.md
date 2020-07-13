@@ -2,7 +2,7 @@ You can find platform-specific installation instructions for Istio [here](https:
 
 The first component that we need to install is the Istio CLI, known as `istioctl`. To install `istioctl`, execute the following command.
 
-`curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.6.5 sh -;cd istio-1.6.5;export PATH=$PWD/bin:$PATH`{{execute}}
+`curl -sL https://istio.io/downloadIstioctl | sh -;export PATH=$PATH:$HOME/.istioctl/bin`{{execute}}
 
 Next, install the Istio operator with the following command.
 
