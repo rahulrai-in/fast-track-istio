@@ -5,12 +5,16 @@
   "details": {
     "steps": [
       {
-        "title": "Prepare Kubernetes Cluster",
+        "title": "Your Kubernetes Cluster",
         "text": "step1.md"
       },
       {
-        "title": "Deploy Istio",
+        "title": "Install Istio",
         "text": "step2.md"
+      },
+      {
+        "title": "Customize Installation",
+        "text": "step3.md"
       }
     ]
   },

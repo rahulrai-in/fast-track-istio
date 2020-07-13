@@ -1,5 +1,3 @@
-## Install options
-
 Istio has a set of in-built configuration profiles that can be used to specify the Istio components that you wish to install on your cluster. You can also specify the list of components that you want to install using the long form of the operator specification. For example, the following specification will install grafana on your cluster.
 
 `

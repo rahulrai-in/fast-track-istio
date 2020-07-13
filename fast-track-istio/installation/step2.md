@@ -1,5 +1,3 @@
-## Install Istio
-
 You can find platform-specific installation instructions for Istio [here](https://istio.io/latest/docs/setup/install).
 
 The first component that we need to install is the Istio CLI, known as `istioctl`. To install `istioctl`, execute the following command.
