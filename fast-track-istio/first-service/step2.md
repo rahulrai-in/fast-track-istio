@@ -12,7 +12,7 @@ Let's now create a namespace for Istio resources with the following command.
 
 `kubectl create ns istio-system`{{execute}}
 
-The following command will install a fee Istio components (*istio-ingressgateway*, *istiod*, and *prometheus*) on your cluster.
+The following command will install only the Istio daemon-*istiod*  on your cluster.
 
 `kubectl apply -f - <<EOF
 apiVersion: install.istio.io/v1alpha1
@@ -21,10 +21,10 @@ metadata:
   namespace: istio-system
   name: example-istiocontrolplane
 spec:
-  profile: default
+  profile: minimum
 EOF`{{execute}}
 
-You can check the services deployed by the operator by executing the following command. Please wait for sometime and re-run the command if the resources do not appear immediately.
+You can check the services deployed by the operator by executing the following command.
 
 `kubectl get svc -n istio-system`{{execute}}
 

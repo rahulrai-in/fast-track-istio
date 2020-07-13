@@ -5,7 +5,12 @@
     {
       "course_id": "installation",
       "title": "1. Installing Istio",
-      "description": "Install Istio on Kubernetes cluster"
+      "description": "Learn to install Istio on Kubernetes cluster."
+    },
+    {
+      "course_id": "first-service",
+      "title": "2. Deploying services",
+      "description": "Learn to deploy existing and new services to Istio."
     }
   ]
 }
