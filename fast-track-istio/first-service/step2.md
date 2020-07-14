@@ -42,6 +42,6 @@ The _istio-proxy_ container is the sidecar that intercepts manages the traffic e
 
 Now that you understand how sidecars work. Let's recreate the service with automatic sidecar injection. You can delete the namespace and its services with the following command.
 
-`kubectl delete namespace --namespace=fast-track-istio`{{execute}}
+`kubectl delete namespace fast-track-istio`{{execute}}
 
 Let's create the service again in the next step.

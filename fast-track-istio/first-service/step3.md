@@ -1,5 +1,6 @@
 Let's deploy our service to the mesh again. In the project files, inspect the contents of the `my-workshop\book-club-istio.yaml` specification. Here you will notice that we have set the value of the label `istio-injection` to *true*. Istio will read this value and automatically inject sidecars to any pods that it creates in this namespace.
 
+
 `
 apiVersion: v1
 kind: Namespace
@@ -8,6 +9,7 @@ metadata:
   labels:
     istio-injection: enabled
 `
+
 
 There are no changes to the deployment specification. Also, since we will use a gateway to access the service, the type of service is set to ClusterIP (default). A ClusterIP service receives an IP address from the Kubernetes DNS, but it is accessible only within the cluster.
 
