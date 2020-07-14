@@ -11,7 +11,7 @@ metadata:
   labels:
     app: bookclub
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: bookclub
@@ -42,6 +42,7 @@ metadata:
 spec:
   ports:
   - port: 8080
+    nodePort: 30001
     protocol: TCP
   selector:
     app: bookclub
