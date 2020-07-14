@@ -13,6 +13,7 @@ metadata:
 
 There are no changes to the deployment specification. Also, since we will use a gateway to access the service, the type of service is set to ClusterIP (default). A ClusterIP service receives an IP address from the Kubernetes DNS, but it is accessible only within the cluster.
 
+
 `
 apiVersion: v1
 kind: Service
@@ -28,6 +29,7 @@ spec:
   selector:
     app: bookclub
 `
+
 
 Execute the following command to deploy the application now.
 
