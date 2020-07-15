@@ -24,4 +24,4 @@ You must have noticed that we specified gateway and virtual service objects only
 
 Let's now deploy each of these mesh-enabled services to our cluster. The `kubectl` has a nifty tool called `kustomize` that you can use to process multiple Kubernetes specification files.
 
-`kubectl kustomize my-workhop > compiled.yaml | kubectl apply -f -`{{execute}}
+`kubectl kustomize my-workshop | kubectl apply -f -`{{execute}}
