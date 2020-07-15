@@ -18,6 +18,8 @@ A _NodePort_ service can be accessed through any machine on the cluster through 
 
 https://[[HOST_SUBDOMAIN]]-30001-[[KATACODA_HOST]].environments.katacoda.com/
 
+> Note: Currently, only the home page of the application is operational because we haven't yet deployed all the supporting microservices that this application requires. We will deploy all the services to the mesh to make the application fully operational in the next exercise.
+
 Let's bring this service to the mesh now.
 
 ## Inject sidecar

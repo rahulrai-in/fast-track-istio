@@ -11,6 +11,11 @@
       "course_id": "first-service",
       "title": "2. Deploying services",
       "description": "Learn to deploy existing and new services to Istio."
+    },
+    {
+      "course_id": "all-on-board",
+      "title": "3. All on board",
+      "description": "Deploy the services of the Book Club application to the mesh."
     }
   ]
 }
