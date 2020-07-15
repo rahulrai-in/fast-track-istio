@@ -25,3 +25,11 @@ You must have noticed that we specified gateway and virtual service objects only
 Let's now deploy each of these mesh-enabled services to our cluster. The `kubectl` has a nifty tool called `kustomize` that you can use to process multiple Kubernetes specification files.
 
 `kubectl kustomize my-workshop | kubectl apply -f -`{{execute}}
+
+You can explore the user interface of the application at the following URL.
+
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+
+## Conclusion
+
+We deployed all the components of our sample application to the Istio service mesh. We are now ready to explore the many features of Istio, which we will do next.
