@@ -9,7 +9,7 @@ In the last exercise, we deployed just one service to the mesh. In this exercise
 
 Here is the high-level design diagram of the **Book Club** application.
 
-![Book Club HLD](./assets/architecture.svg)
+![Book Club HLD](https://raw.githubusercontent.com/rahulrai-in/fast-track-istio/3f4a42abb0bc586bd197a62f9dbe93e645f3d583/assets/architecture.svg)
 
 The **book-club** user interface is integrated into multiple services to serve books and movie information to the end-user. An externally hosted service named **independent service** serves both books and movies to the interface. The **movies service** has two versions that serve different genres of movies (we will explore versioning later). The **books service** also serves data from the **legacy service** through an endpoint. All the services serve data over HTTP through REST.
 
