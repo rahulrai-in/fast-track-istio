@@ -9,12 +9,8 @@
         "text": "step1.md"
       },
       {
-        "title": "Deploy Microservice",
+        "title": "Deploy Book Club Application",
         "text": "step2.md"
-      },
-      {
-        "title": "Manual Sidecar Injection",
-        "text": "step3.md"
       }
     ]
   },
