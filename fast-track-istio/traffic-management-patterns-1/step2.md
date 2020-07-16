@@ -4,7 +4,9 @@ In this exercise, we will deploy two versions of the **movies** service and rout
 
 We also require a virtual service and gateway resource to route requests to our services. The specification for the objects is present in the file `my-workshop/versioning/movies-gw-dr-vs.yaml`. While exploring this file, pay special attention to the `subset` declaration in `DestinationRule` specification.
 
-`apiVersion: networking.istio.io/v1alpha3
+
+<pre>
+apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
   name: movies-api-destination
@@ -17,12 +19,13 @@ spec:
         version: "1"
     - name: v2
       labels:
-        version: "2"`
+        version: "2"
+</pre>
 
 Also, note how the `virtualservice` object directs requests (virtually) to the subsets with the following specification.
 
-
-`http:
+<pre>
+http:
   match:
     - headers:
         version:
@@ -38,7 +41,8 @@ Also, note how the `virtualservice` object directs requests (virtually) to the s
         host: movies-api-service
         port:
             number: 3000
-        subset: v1`
+        subset: v1
+</pre>
 
 
 The previous policy routes the requests with a header key named `version` and the value set to 2 to version 2 of the **movies** API, and other requests to version 1 of the service. Let's apply the specifications to the cluster with the following command.

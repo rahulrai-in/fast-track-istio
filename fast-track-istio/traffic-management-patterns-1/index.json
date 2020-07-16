@@ -11,6 +11,10 @@
       {
         "title": "Pattern 1: Request routing",
         "text": "step2.md"
+      },
+      {
+        "title": "Pattern 2: Fault injection",
+        "text": "step3.md"
       }
     ]
   },
