@@ -27,6 +27,6 @@ Execute the following script to deploy the two subsets of service.
 
 After waiting for some time, execute the following script to dispatch 10 requests to the service.
 
-`for ((i=1;i<=10;i++)); do curl "http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/"; done`
+`for ((i=1;i<=10;i++)); do echo -n "Request #{$i}: "; curl -sS "http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/"; echo; done`{{execute}}
 
-The task to split the canary traffic by HTTP attributes is left to you as an exercise. Let’s discuss the next pattern now.
+The task to split the canary traffic by HTTP attributes is left to you as an exercise.
