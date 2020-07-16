@@ -2,7 +2,7 @@ Versioning is a critical aspect of microservices to maintain compatibility with 
 
 In this exercise, we will deploy two versions of the **movies** service and route traffic to appropriate endpoints using gateway rules. In the editor window, explore the specification in the file `my-workshop/versioning/movies-versioned-svc-deploy.yaml` which defines two deployments, one for each version of the **movies** service, and a service object that will randomly route requests to the pods created for the service.
 
-Let's now create a virtual service and gateway resource to route requests to our just created services. The spec for the service is present in the file `my-workshop/versioning/movies-gw-dr-vs.yaml`. Pay special attention to the `subset` declaration in `DestinationRule` specification.
+We also require a virtual service and gateway resource to route requests to our services. The specification for the objects is present in the file `my-workshop/versioning/movies-gw-dr-vs.yaml`. While exploring this file, pay special attention to the `subset` declaration in `DestinationRule` specification.
 
 `apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
@@ -21,8 +21,8 @@ spec:
 
 Also, note how the `virtualservice` object directs requests (virtually) to the subsets with the following specification.
 
-`
-http:
+
+`http:
 - match:
     - headers:
         version:
@@ -38,8 +38,8 @@ http:
         host: movies-api-service
         port:
             number: 3000
-        subset: v1
-`
+        subset: v1`
+
 
 The previous policy routes the requests with a header key named `version` and the value set to 2 to version 2 of the **movies** API, and other requests to version 1 of the service. Let's apply the specifications to the cluster with the following command.
 
