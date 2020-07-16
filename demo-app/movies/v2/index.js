@@ -22,11 +22,16 @@ function getMovie(req, res, next) {
   res.json(movie);
 }
 
+function hello(req, res, next) {
+  res.send("Hello from v2 at " + new Date(Date.now()).toString());
+}
+
 var server = restify.createServer();
 server.pre(restify.pre.sanitizePath());
 
 server.get("/movies", getMovies);
 server.get("/movies/:id", getMovie);
+server.get("/", hello);
 
 server.listen(8080, function () {
   console.log("%s listening at %s", server.name, server.url);
