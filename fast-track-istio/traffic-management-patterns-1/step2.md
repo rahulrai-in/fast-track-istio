@@ -43,12 +43,11 @@ http:
         subset: v1
 </pre>
 
-
 The previous policy routes the requests with a header key named `version` and the value set to 2 to version 2 of the **movies** API, and other requests to version 1 of the service. Let's apply the specifications to the cluster with the following command.
 
 `kubectl kustomize my-workshop/versioning | kubectl apply -f -`{{execute}}
 
-Let's send a request to version 1 of the service - v1.
+Ensure that the service is up and running, and send a request to version 1 of the service - v1.
 
 `curl https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
 
