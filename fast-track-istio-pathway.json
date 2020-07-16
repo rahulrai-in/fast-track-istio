@@ -19,7 +19,7 @@
     },
     {
       "course_id": "traffic-management-patterns-1",
-      "title": "4. Traffic management - versioning",
+      "title": "4. Traffic management - versioning & fault injection",
       "description": "Learn to implement traffic management patterns on microservices."
     }
   ]

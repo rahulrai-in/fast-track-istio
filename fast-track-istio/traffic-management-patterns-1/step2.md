@@ -49,10 +49,10 @@ The previous policy routes the requests with a header key named `version` and th
 
 Ensure that the service is up and running, and send a request to version 1 of the service - v1.
 
-`curl https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
+`curl http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
 
 The following command will send a request to version 2 of the service - v2.
 
-`curl https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/ -H "version: 2"`{{execute}}
+`curl http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/ -H "version: 2"`{{execute}}
 
 In this example, we used request header to filter and route requests to one of the two versions of the service. However, you can also use one or more filters based on the various Level 4–7 attributes such as URL, scheme, method, authority, and port to configure traffic routing. You can use this feature to deploy canary releases, perform A\B tests, etc.
