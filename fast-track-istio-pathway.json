@@ -16,6 +16,11 @@
       "course_id": "all-on-board",
       "title": "3. All on board",
       "description": "Deploy the services of the Book Club application to the mesh."
+    },
+    {
+      "course_id": "traffic-management-patterns-1",
+      "title": "4. Traffic management - versioning",
+      "description": "Learn to implement traffic management patterns on microservices."
     }
   ]
 }
