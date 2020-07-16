@@ -9,16 +9,12 @@
         "text": "step1.md"
       },
       {
-        "title": "Pattern 1: Request Routing",
+        "title": "Pattern 1: Request routing",
         "text": "step2.md"
       },
       {
-        "title": "Pattern 2: Fault Injection",
+        "title": "Pattern 2: Fault injection",
         "text": "step3.md"
-      },
-      {
-        "title": "Pattern 3: Canary Releases",
-        "text": "step4.md"
       }
     ]
   },
