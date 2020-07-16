@@ -23,7 +23,7 @@ Also, note how the `virtualservice` object directs requests (virtually) to the s
 
 
 `http:
-- match:
+  match:
     - headers:
         version:
             exact: "2"
@@ -33,7 +33,7 @@ Also, note how the `virtualservice` object directs requests (virtually) to the s
         port:
             number: 3000
         subset: v2
-- route:
+  route:
     - destination:
         host: movies-api-service
         port:
