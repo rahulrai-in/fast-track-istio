@@ -4,7 +4,6 @@ In this exercise, we will deploy two versions of the **movies** service and rout
 
 We also require a virtual service and gateway resource to route requests to our services. The specification for the objects is present in the file `my-workshop/versioning/movies-gw-dr-vs.yaml`. While exploring this file, pay special attention to the `subset` declaration in `DestinationRule` specification.
 
-
 <pre>
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
