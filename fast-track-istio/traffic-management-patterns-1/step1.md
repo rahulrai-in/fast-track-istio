@@ -6,4 +6,8 @@ Let's start our cluster and install Istio on it with the following command.
 
 `. my-workshop/prepare-cluster.sh`{{execute}}
 
-Let's move on to the next step while the script executes.
+Let's check the health of Istio control plane resources (pods, deployment, services) deployed on our cluster.
+
+`watch -n .5 kubectl get pods,deploy,svc -o wide -n istio-system`{{execute}}
+
+Once all the resources are running, press "CTRL+C" to exit the watch. Let's move on to the next step while the script executes.
