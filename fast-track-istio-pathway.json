@@ -9,18 +9,23 @@
     },
     {
       "course_id": "first-service",
-      "title": "2. Deploying services",
+      "title": "2. Deploying Services",
       "description": "Learn to deploy existing and new services to Istio."
     },
     {
       "course_id": "all-on-board",
-      "title": "3. All on board",
+      "title": "3. All on Board",
       "description": "Deploy the services of the Book Club application to the mesh."
     },
     {
       "course_id": "traffic-management-patterns-1",
-      "title": "4. Patterns: Versioning, Fault injection, & Canary releases",
-      "description": "Learn to implement traffic management patterns on microservices."
+      "title": "4. Patterns: Versioning, Fault Injection, & Canary Releases",
+      "description": "Learn to implement microservices traffic management patterns."
+    },
+    {
+      "course_id": "traffic-management-patterns-2",
+      "title": "5. Patterns: Resilience & Mirroring",
+      "description": "Learn to implement some more microservices traffic management patterns."
     }
   ]
 }

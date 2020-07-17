@@ -12,7 +12,7 @@ spec:
         name: http-books-api-gateway
         protocol: HTTP
       hosts:
-        - books.fast-track-istio.io
+        - "*"
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
@@ -21,7 +21,7 @@ metadata:
   namespace: fast-track-istio
 spec:
   hosts:
-    - "books.fast-track-istio.io"
+    - "*"
   gateways:
     - books-api-gateway
   http:
