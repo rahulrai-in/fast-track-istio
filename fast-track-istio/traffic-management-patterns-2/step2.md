@@ -8,11 +8,11 @@ For this demo, we will use an endpoint in the juice-shop API service that has a 
 
 Let’s first deploy the **books** service and its associated virtual service and gateway resources with the following command.
 
-`kubectl apply -f my-workshop/resilience/books.yml -f my-workshop/resilience/books-gw-vs.yml`{{execute}}
+`kubectl apply -f my-workshop/resilience/books.yaml -f my-workshop/resilience/books-gw-vs.yaml`{{execute}}
 
 The specifications that we applied do not implement any resiliency strategies yet. Let’s execute a test that makes 50 requests to the FeelingLucky (/books/feeling-lucky/) endpoint that has a high rate of producing errors. Execute the following script to launch the test.
 
-`for ((i=1;i<=50;i++)); do echo -n "Request #{$i}: "; curl -sS "http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/"; echo; done`{{execute}}
+`for ((i=1;i<=50;i++)); do echo -n "Request #{$i}: "; curl -sS "http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/books/feeling-lucky"; echo; done`{{execute}}
 
 Let’s now implement the resiliency strategies that we discussed previously. The following specification of virtual service adds a timeout period of 30 seconds to each request received from the client. Within this period, Envoy makes 10 attempts to fetch results from the juice-shop API service with a waiting period of 3 seconds between each attempt. We have also specified the failure conditions as the value of the retryOn key on which the retry policy kicks in. See `my-workshop/resilience/books-gw-dr-vs-resilence.yaml`.
 
@@ -68,6 +68,6 @@ Let’s apply this configuration to our cluster with the following command.
 
 Let’s execute the same test that we previously executed to verify the effectiveness of this policy.
 
-`for ((i=1;i<=50;i++)); do echo -n "Request #{$i}: "; curl -sS "http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/"; echo; done`{{execute}}
+`for ((i=1;i<=50;i++)); do echo -n "Request #{$i}: "; curl -sS "http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/books/feeling-lucky"; echo; done`{{execute}}
 
 When you execute the test this time, you will notice that the tests execute much slower due to the request timeout policy and retries happening in the mesh. That is a significant improvement without any code alterations. Note that these policies are not universal and are scoped to each client of the juice API service, as the service may fault for a single client while still functioning for others.
