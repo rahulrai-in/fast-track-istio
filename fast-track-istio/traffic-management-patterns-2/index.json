@@ -9,11 +9,11 @@
         "text": "step1.md"
       },
       {
-        "title": "Pattern 1: Request routing",
+        "title": "Pattern 4: Resilience",
         "text": "step2.md"
       },
       {
-        "title": "Pattern 2: Fault injection",
+        "title": "Pattern 5: Mirroring",
         "text": "step3.md"
       }
     ]

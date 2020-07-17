@@ -60,5 +60,13 @@ namespace books.Controllers
                 return Ok(await response.Content.ReadAsStringAsync());
             }
         }
+
+        [HttpGet("feeling-lucky")]
+        public IActionResult FeelingLucky()
+        {
+            var rng = new Random();
+            var luckyDip = rng.Next(1, 100);
+            return luckyDip >= 80 ? Ok("You are lucky") : StatusCode(500, "Better luck next time");
+        }
     }
 }

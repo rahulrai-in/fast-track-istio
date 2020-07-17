@@ -14,14 +14,7 @@ spec:
   selector:
     matchLabels:
       app: legacy-api
-  replicas: 2
-  minReadySeconds: 1
-  progressDeadlineSeconds: 600
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
+  replicas: 1
   template:
     metadata:
       labels:
@@ -33,11 +26,10 @@ spec:
           imagePullPolicy: IfNotPresent
           resources:
             limits:
-              cpu: 1000m
-              memory: 1024Mi
-            requests:
-              cpu: 100m
+              cpu: "1"
               memory: 100Mi
+            requests:
+              cpu: "0.5"
           ports:
             - name: http-legacy-api
               containerPort: 80
