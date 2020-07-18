@@ -60,5 +60,4 @@ Let's launch another terminal window by clicking on the **+** icon and selecting
 
 Execute the following script to send 50 requests to the service.
 
-`for ((i=1;i<=50;i++)); do echo -n "Request #{$i}: "; curl -sS "http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/books/feeling-lucky"; echo; done`{{execute}}
-
+`for ((i=1;i<=50;i++)); do echo -n "Request #{$i}: "; curl -sS "http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/"; echo; done`{{execute}}
