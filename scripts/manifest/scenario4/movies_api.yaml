@@ -14,7 +14,7 @@ spec:
   selector:
     matchLabels:
       app: movies-api
-  replicas: 2
+  replicas: 1
   minReadySeconds: 1
   progressDeadlineSeconds: 600
   strategy:

@@ -56,4 +56,4 @@ It is time to apply the specifications now. Execute the followign command to app
 
 Let's launch two other terminal windows by clicking on the **+** icon and selecting **Open New Terminal** from the options. Execute the following command in the first of the new terminal windows.
 
-``
+`kubectl logs `

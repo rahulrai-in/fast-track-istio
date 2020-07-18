@@ -13,7 +13,7 @@ metadata:
   labels:
     app: books
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: books
