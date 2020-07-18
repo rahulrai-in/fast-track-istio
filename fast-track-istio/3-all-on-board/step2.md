@@ -24,6 +24,8 @@ You must have noticed that we specified gateway and virtual service objects only
 
 Let's now deploy each of these mesh-enabled services to our cluster. The `kubectl` has a nifty tool called `kustomize` that you can use to process multiple Kubernetes specification files.
 
+> The [**Independent** service](https://github.com/rahulrai-in/fast-track-istio/tree/master/demo-app/independent) must be hosted outside the cluster for this workshop. After deploying the service, update the environment variable `independentServiceUri` of the book-club application specification with the URL of the service before deploying it.
+
 `kubectl kustomize my-workshop | kubectl apply -f -`{{execute}}
 
 You can explore the user interface of the application at the following URL.

@@ -3,29 +3,34 @@
   "description": "Explore the features of Istio by strategically deploying a simple microservices application to a Kubernetes cluster.",
   "courses": [
     {
-      "course_id": "installation",
+      "course_id": "1-installation",
       "title": "1. Installing Istio",
       "description": "Learn to install Istio on Kubernetes cluster."
     },
     {
-      "course_id": "first-service",
+      "course_id": "2-first-service",
       "title": "2. Deploying Services",
       "description": "Learn to deploy existing and new services to Istio."
     },
     {
-      "course_id": "all-on-board",
+      "course_id": "3-all-on-board",
       "title": "3. All on Board",
       "description": "Deploy the services of the Book Club application to the mesh."
     },
     {
-      "course_id": "traffic-management-patterns-1",
+      "course_id": "4-traffic-management-patterns-1",
       "title": "4. Patterns: Versioning, Fault Injection, & Canary Releases",
       "description": "Learn to implement microservices traffic management patterns."
     },
     {
-      "course_id": "traffic-management-patterns-2",
+      "course_id": "5-traffic-management-patterns-2",
       "title": "5. Patterns: Resilience & Mirroring",
       "description": "Learn to implement some more microservices traffic management patterns."
+    },
+    {
+      "course_id": "6-service-discovery",
+      "title": "6. Service Discovery",
+      "description": "Manage services that ."
     }
   ]
 }

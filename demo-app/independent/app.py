@@ -1,6 +1,7 @@
 import base64
 import copy
 import json
+import datetime
 import flask
 from flask import request, jsonify
 
@@ -13,6 +14,11 @@ with open('books.json') as booksdatafile:
 
 with open('movies.json') as moviesdatafile:
     movies = json.load(moviesdatafile)
+
+
+@app.route('/', methods=['GET'])
+def __home():
+    return "Hello from independent service at " + datetime.datetime.now().strftime("%c")
 
 
 @app.route('/books/', methods=['GET'])
