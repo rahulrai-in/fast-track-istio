@@ -69,3 +69,9 @@ Let’s execute the same test that we previously executed to verify the effectiv
 `for ((i=1;i<=50;i++)); do echo -n "Request #{$i}: "; curl -sS "http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/books/feeling-lucky"; echo; done`{{execute}}
 
 When you execute the test this time, you will notice that the tests execute much slower due to the request timeout policy and retries happening in the mesh. That is a significant improvement without any code alterations. Note that these policies are not universal and are scoped to each client of the **books** service, as the service may fault for a single client while still functioning for others.
+
+Let's delete the namespace and its resource before proceeding to the next pattern by executing the following command.
+
+`kubectl delete namespace fast-track-istio`{{execute}}
+
+It will take some time to clean up the resources within the namespace; let's proceed to the next step in the meanwhile.
