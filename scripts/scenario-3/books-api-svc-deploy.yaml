@@ -26,10 +26,11 @@ spec:
               value: "http://legacy-api-service.fast-track-istio.svc.cluster.local:7000"
           resources:
             limits:
-              cpu: "1"
-              memory: 100Mi
+              cpu: "200m"
+              memory: 200Mi
             requests:
-              cpu: "0.5"
+              cpu: "100m"
+              memory: 100Mi
 ---
 apiVersion: v1
 kind: Service

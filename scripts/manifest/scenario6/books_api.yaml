@@ -28,6 +28,13 @@ spec:
           ports:
             - name: http-books-api
               containerPort: 80
+          resources:
+            limits:
+              cpu: "200m"
+              memory: 200Mi
+            requests:
+              cpu: "100m"
+              memory: 100Mi
           env:
             - name: LegacyServiceUri
               value: "http://legacy-api-service.fast-track-istio.svc.cluster.local:7000"

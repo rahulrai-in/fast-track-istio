@@ -27,10 +27,11 @@ spec:
           image: fasttrackistio/books:1.0.0
           resources:
             limits:
-              cpu: "1"
-              memory: 100Mi
+              cpu: "200m"
+              memory: 200Mi
             requests:
-              cpu: "0.5"
+              cpu: "100m"
+              memory: 100Mi
           ports:
             - name: http-books-api
               containerPort: 80
