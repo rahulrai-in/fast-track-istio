@@ -23,6 +23,10 @@ function getMovie(req, res, next) {
 }
 
 function hello(req, res, next) {
+  console.log(
+    "Hello request received by v1 from %s",
+    req.connection.remoteAddress
+  );
   res.send("Hello from v1 at " + new Date(Date.now()).toString());
 }
 
