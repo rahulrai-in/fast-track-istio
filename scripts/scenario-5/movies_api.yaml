@@ -34,10 +34,10 @@ spec:
           imagePullPolicy: IfNotPresent
           resources:
             limits:
-              cpu: 1000m
-              memory: 1024Mi
+              cpu: "200m"
+              memory: 200Mi
             requests:
-              cpu: 100m
+              cpu: "100m"
               memory: 100Mi
           ports:
             - name: http-movies-api
