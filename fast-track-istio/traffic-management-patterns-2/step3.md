@@ -54,6 +54,11 @@ It is time to apply the specifications now. Execute the followign command to app
 
 `kuebctl apply -f my-workshop\mirroring\movies-mirror-gw-dr-vs.yaml -f my-workshop\mirroring\movies-versioned-svc-deploy.yaml`{{execute}}
 
-Let's launch two other terminal windows by clicking on the **+** icon and selecting **Open New Terminal** from the options. Execute the following command in the first of the new terminal windows.
+Let's launch another terminal window by clicking on the **+** icon and selecting **Open New Terminal** from the options. Execute the following command in the new terminal window to follow the log trail of the **movies** service.
 
-`kubectl logs `
+`kubectl logs svc/movies-api-service -n fast-track-istio -f`{{execute}}
+
+Execute the following script to send 50 requests to the service.
+
+`for ((i=1;i<=50;i++)); do echo -n "Request #{$i}: "; curl -sS "http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/books/feeling-lucky"; echo; done`{{execute}}
+
