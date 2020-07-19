@@ -30,7 +30,7 @@
     {
       "course_id": "6-service-discovery",
       "title": "6. Service Discovery",
-      "description": "Manage services that ."
+      "description": "Bring services outside the cluster to the service mesh."
     }
   ]
 }

@@ -1,0 +1,34 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: fast-track-istio
+  labels:
+    istio-injection: enabled
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: ServiceEntry
+metadata:
+  name: independent-service-entry
+  namespace: fast-track-istio
+spec:
+  hosts:
+    - independent.internal
+  location: MESH_INTERNAL
+  ports:
+    - number: 8080
+      name: http
+      protocol: HTTP
+  resolution: DNS
+  workloadSelector:
+    labels:
+      app: independent
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: WorkloadEntry
+metadata:
+  name: independent-workload-entry
+  namespace: fast-track-istio
+spec:
+  address: independent.australiaeast.azurecontainer.io
+  labels:
+    app: independent
