@@ -1,0 +1,16 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: books-api-viewer
+  namespace: fast-track-istio
+spec:
+  selector:
+    matchLabels:
+      app: books
+  rules:
+    - from:
+        - source:
+            principals: ["cluster.local/ns/fast-track-istio/sa/books-viewer-sa"]
+      to:
+        - operation:
+            methods: ["GET"]

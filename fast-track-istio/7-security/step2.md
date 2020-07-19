@@ -1,77 +1,75 @@
-A resilient system degrades gracefully when failures occur in downstream systems. To build resilient systems, Istio provides several turnkey features such as client-side load balancing, outlier detection, automatic retry, and request timeouts. We have already discussed the various client-side load balancing strategies; now, we will see how you can combine outlier detection (also called circuit breaker), request timeouts, and retries to ensure reliable communication between services. We will configure the following policies together:
+In the world of microservices, security can quickly become unwieldy with poor implementation and management. Traditionally, security policies have revolved around the network identity of a service, its IP address. However, IP addresses of workloads are ephemeral in Kubernetes and any other container orchestrator, so Istio solves this problem by decoupling the identity of a workload from the host.
 
-- Circuit breaker/outlier detection to eject faulty instances from the load balancer pool.
-- Timeout to avoid waiting on a faulty service.
-- Retries to forward the request to another instance in the load balancer pool if the primary instance is not responding.
+## Applying transport authentication
 
-For this demo, we will use an endpoint in the **books** service that has a probability of 0.8 to fail. In the real world, you rarely encounter such services that perform so poorly. Our goal is to implement multiple resiliency policies such that we receive a much better quality of service (QoS) without making any changes to the application code itself. Let's first deploy the **books** service and its associated virtual service and gateway resources with the following command.
+Let's begin with deploying the **Books** service to the service mesh with the following command.
 
-`kubectl apply -f my-workshop/resilience/books.yaml -f my-workshop/resilience/books-gw-vs.yaml`{{execute}}
+`kubectl apply -f my-workshop/books-api.yaml && kubectl apply -f my-workshop/books-api-vs-gw.yaml`{{execute}}
 
-The specifications that we applied do not implement any resiliency strategies yet. Let's execute a test that makes 50 requests to the FeelingLucky (/books/feeling-lucky/) endpoint with a high rate of producing errors. Execute the following script to launch the test.
+Currently, this service uses unsecured HTTP transport. Let's add a busybox pod inside and outside the mesh by applying the following specification.
 
-`for ((i=1;i<=50;i++)); do echo -n "Request #{$i}: "; curl -sS "http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/books/feeling-lucky"; echo; done`{{execute}}
+`kubectl apply -f my-workshop/busybox.yaml`{{execute}}
 
-Let's now implement the resiliency strategies that we discussed previously. The following specification of virtual service adds a timeout period of 30 seconds to each request received from the client. Within this period, Envoy makes ten attempts to fetch results from the **books** service with a waiting period of 3 seconds between each attempt. We have also specified the failure conditions as the value of the retryOn key on which the retry policy kicks in. See `my-workshop/resilience/books-gw-dr-vs-resilence.yaml`.
+Let's verify whether our services can communicate with each other by sending two requests to the same endpoint from the busybox pods.
+
+- From outside the mesh
+
+`kubectl exec -ti busybox -- curl http://books-api-service.fast-track-istio.svc.cluster.local:4000/books/1 -v`{{execute}}
+
+- From within the mesh
+
+`kubectl exec -ti -n fast-track-istio busybox -- curl http://books-api-service.fast-track-istio.svc.cluster.local:4000/books/1 -v`{{execute}}
+
+Let's alter the behavior and apply a blanket mTLS-only policy over the namespace using the peer authentication policy.
 
 <pre>
-apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
 metadata:
-  name: books-api-vservice
+  name: default
   namespace: fast-track-istio
 spec:
-  hosts:
-    - "*"
-  gateways:
-    - books-api-gateway
-  http:
-    - route:
-        - destination:
-            host: books-api-service
-            port:
-              number: 4000
-      timeout: 30s
-      retries:
-        attempts: 10
-        perTryTimeout: 3s
-        retryOn: "5xx,connect-failure,refused-stream"
+  mtls:
+    mode: STRICT
 </pre>
 
-Next, we add a destination rule that detects and ejects the outliers from the load balancer pool. The following specification limits the number of parallel requests to the **books** service, and on receiving a single error (should not be 1 in real-world scenarios), ejects the endpoint from the load balancer pool for a minimum of three minutes. Envoy decides on the endpoints to eject and the ones to bring back in the pool every second, and it can eject up to 100 percent of the endpoints from the pool.
+To apply the policy, execute the following command.
+
+`kubectl apply -f my-workshop/default-mtls-policy.yaml`{{execute}}
+
+To configure mTLS on the client, we will create a destination rule to enforce TLS on the client to the service channel.
 
 <pre>
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: books-api-destination-rule
-  namespace: fast-track-istio
+  name: default-destination-rule
+  namespace: istio-system
 spec:
-  host: books-api-service
+  host: "*.local"
   trafficPolicy:
-    connectionPool:
-      http:
-        http1MaxPendingRequests: 1
-        maxRequestsPerConnection: 1
-    outlierDetection:
-      consecutiveErrors: 1
-      interval: 1s
-      baseEjectionTime: 3m
-      maxEjectionPercent: 100
+    tls:
+      mode: ISTIO_MUTUAL
 </pre>
 
-Let's apply this configuration to our cluster with the following command.
+The wildcard match _\*.local_ makes the policy in previous listing applicable to all services in the mesh. Let's apply this policy to the mesh now.
 
-`kubectl apply -f my-workshop/resilience/books-gw-dr-vs-resilence.yaml`{{execute}}
+`kubectl apply -f my-workshop/default-dr.yaml`{{execute}}
 
-Let's execute the same test that we previously executed to verify the effectiveness of this policy.
+After applying the policy, only the services within the mesh can communicate with each other over a secure mTLS channel. Let's execute the busybox instructions again to witness the policy in action.
 
-`for ((i=1;i<=50;i++)); do echo -n "Request #{$i}: "; curl -sS "http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/books/feeling-lucky"; echo; done`{{execute}}
+- From outside the mesh
 
-When you execute the test this time, you will notice that the tests execute much slower due to the request timeout policy and retries happening in the mesh. That is a significant improvement without any code alterations. Note that these policies are not universal and are scoped to each client of the **books** service, as the service may fault for a single client while still functioning for others.
+`kubectl exec -ti busybox -- curl http://books-api-service.fast-track-istio.svc.cluster.local:4000/books/1 -v`{{execute}}
 
-Let's delete the namespace and its resource before proceeding to the next pattern by executing the following command.
+- From within the mesh without service account
+
+`kubectl exec -ti -n fast-track-istio busybox -- curl http://books-api-service.fast-track-istio.svc.cluster.local:4000/books/1 -v`{{execute}}
+
+- From within the mesh with service account
+
+`kubectl exec -ti -n fast-track-istio busybox-sa -- curl http://books-api-service.fast-track-istio.svc.cluster.local:4000/books/1 -v`{{execute}}
+
+Let's configure authorization on ingress gateway next. Before we proceed, let's delete our namespace to start afresh.
 
 `kubectl delete namespace fast-track-istio`{{execute}}
-
-It will take some time to clean up the resources within the namespace; let's proceed to the next step in the meanwhile.

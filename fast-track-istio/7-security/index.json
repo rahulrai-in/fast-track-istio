@@ -9,11 +9,11 @@
         "text": "step1.md"
       },
       {
-        "title": "Pattern 4: Resilience",
+        "title": "Transport Authentication",
         "text": "step2.md"
       },
       {
-        "title": "Pattern 5: Mirroring",
+        "title": "Authorization",
         "text": "step3.md"
       }
     ]

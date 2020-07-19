@@ -12,7 +12,7 @@ spec:
         name: http-books-api-gateway
         protocol: HTTP
       hosts:
-        - books.fast-track-istio.io
+        - "*"
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
@@ -21,7 +21,7 @@ metadata:
   namespace: fast-track-istio
 spec:
   hosts:
-    - books.fast-track-istio.io
+    - "*"
   gateways:
     - books-api-gateway
   http:
@@ -30,3 +30,18 @@ spec:
             host: books-api-service
             port:
               number: 4000
+---
+# apiVersion: security.istio.io/v1beta1
+# kind: AuthorizationPolicy
+# metadata:
+#   name: ingress-policy
+#   namespace: istio-system
+# spec:
+#   selector:
+#     matchLabels:
+#       app: istio-ingressgateway
+#   action: DENY
+#   rules:
+#   - when:
+#      - key: request.headers[User-Agent]
+#        values: ["curl/*"]
