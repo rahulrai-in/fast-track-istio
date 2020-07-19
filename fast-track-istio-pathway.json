@@ -1,5 +1,5 @@
 {
-  "title": "Fast Track Istio",
+  "title": "Fast Track Istio - NDC Melbourne 2020",
   "description": "Explore the features of Istio by strategically deploying a simple microservices application to a Kubernetes cluster.",
   "courses": [
     {
@@ -36,6 +36,11 @@
       "course_id": "7-security",
       "title": "7. Security",
       "description": "Secure the services running on the Istio service mesh."
+    },
+    {
+      "course_id": "8-observability",
+      "title": "8. Observability",
+      "description": "Monitor services on your mesh in real time with visualization tools."
     }
   ]
 }
