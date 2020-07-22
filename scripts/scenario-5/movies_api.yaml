@@ -1,0 +1,57 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: fast-track-istio
+  labels:
+    istio-injection: enabled
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movies-api-deployment-v1
+  namespace: fast-track-istio
+spec:
+  selector:
+    matchLabels:
+      app: movies-api
+  replicas: 1
+  minReadySeconds: 1
+  progressDeadlineSeconds: 600
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        app: movies-api
+        version: "1"
+    spec:
+      containers:
+        - name: movies-api
+          image: fasttrackistio/movies:1.0.0
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              cpu: "200m"
+              memory: 200Mi
+            requests:
+              cpu: "100m"
+              memory: 100Mi
+          ports:
+            - name: http-movies-api
+              containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: movies-api-service
+  namespace: fast-track-istio
+spec:
+  selector:
+    app: movies-api
+  ports:
+    - name: http-movies-api-service
+      port: 3000
+      targetPort: http-movies-api

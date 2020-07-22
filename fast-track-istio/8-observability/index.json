@@ -1,0 +1,40 @@
+{
+  "icon": "fa-istio",
+  "authenticated": false,
+  "noindex": true,
+  "details": {
+    "steps": [
+      {
+        "title": "Prepare Your Kubernetes Cluster",
+        "text": "step1.md"
+      },
+      {
+        "title": "Jaeger",
+        "text": "step2.md"
+      },
+      {
+        "title": "Prometheus",
+        "text": "step3.md"
+      },
+      {
+        "title": "Grafana",
+        "text": "step4.md"
+      },
+      {
+        "title": "Kiali",
+        "text": "step5.md"
+      }
+    ]
+  },
+  "environment": {
+    "hideintro": true,
+    "hidefinish": true,
+    "uilayout": "editor-terminal",
+    "dashboard": "Access Ports",
+    "showdashboard": true,
+    "uimessage1": "\u001b[32mInteractive Bash Terminal.\u001b[m\r\n"
+  },
+  "backend": {
+    "dockerimage": "istio"
+  }
+}

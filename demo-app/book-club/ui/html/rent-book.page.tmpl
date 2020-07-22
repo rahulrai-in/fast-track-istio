@@ -1,0 +1,37 @@
+{{template "base" .}}
+
+{{define "title"}}Rent-Book{{ end }}
+
+{{define "main"}}
+    <h2>Book Check Out</h2>
+    {{range .Error}}
+        <label class='error'>{{.}}</label> <br/>
+    {{end}}
+    <label class='info'>Source: {{.BooksTemplateData.RequestMetadata.Source}}</label>
+    <label class='info'>Duration: {{.BooksTemplateData.RequestMetadata.RequestDuration}}</label> <br/>
+    {{with .BooksTemplateData.Book}}
+        <div style="text-align: center">
+            {{ if .Thumbnail }}
+                <img src="data:image/png;base64, {{.Thumbnail}}" alt="{{.Title}}"/>
+            {{else}}
+                <img src="https://via.placeholder.com/150" alt="{{.Title}}"/>
+            {{end}}
+        </div>
+        <br/>
+        <div class="snippet">
+            <div class="metadata">
+                #{{.Id}} <strong>{{.Title}}</strong>
+                <p>
+                    by {{titleCase .Author}}
+                </p>
+            </div>
+            <pre><code>{{.Summary}}</code></pre>
+            <div class="metadata">
+                <time>Category: {{.Genre}}</time>
+                <time>Added On: {{humanDate .Date}}</time>
+            </div>
+        </div>
+    {{else}}
+        <p>No book</p>
+    {{end}}
+{{ end }}

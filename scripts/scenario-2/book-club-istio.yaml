@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: fast-track-istio 
+  labels:
+    istio-injection: enabled
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bookclub
+  namespace: fast-track-istio 
+  labels:
+    app: bookclub
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bookclub
+  template:
+    metadata:
+      annotations:
+        sidecar.istio.io/inject: "true"
+      labels:
+        app: bookclub
+    spec:
+      containers:
+        - name: bookclub
+          image: fasttrackistio/bookclub:1.0.0
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              cpu: "200m"
+              memory: 200Mi
+            requests:
+              cpu: "100m"
+              memory: 100Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bookclub
+  namespace: fast-track-istio
+  labels:
+    app: bookclub
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+  selector:
+    app: bookclub

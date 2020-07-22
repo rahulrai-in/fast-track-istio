@@ -1,0 +1,39 @@
+{{define "base"}}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>{{template "title" .}}.Book Club</title>
+        <link rel="stylesheet" href="/static/css/main.css"/>
+        <link
+                rel="shortcut icon"
+                href="/static/img/favicon.ico"
+                type="image/x-icon"
+        />
+        <link
+                rel="stylesheet"
+                href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700"
+        />
+    </head>
+    <body>
+    <header>
+        <h1><a href="/">The Book Club</a></h1>
+    </header>
+    <nav>
+        <div>
+            <a href="/">Home</a>
+        </div>
+        <div>
+            <a href='/books'>Books</a>
+            <a href='/movies'>Movies</a>
+            <a href='/independent'>Independent</a>
+            <a href='/legacy'>Legacy</a>
+        </div>
+    </nav>
+    <main>
+        {{template "main" .}}
+    </main>
+    </body>
+    {{template "footer" .}}
+    </html>
+{{ end }}

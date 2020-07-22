@@ -1,0 +1,64 @@
+{{template "base" .}}
+
+{{define "title"}}Independent{{ end }}
+
+{{define "main"}}
+    <h2>Micro Library</h2>
+    {{range .Error}}
+        <label class='error'>{{.}}</label> <br/>
+    {{end}}
+    <label class='info'>Source: {{.BooksTemplateData.RequestMetadata.Source}}</label>
+    <label class='info'>Duration: {{.BooksTemplateData.RequestMetadata.RequestDuration}}</label> <br/>
+    {{if .BooksTemplateData.Books}}
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Thumbnail</th>
+                <th>Date Added</th>
+            </tr>
+            {{range .BooksTemplateData.Books}}
+                <tr>
+                    <td>
+                        <a href="/rent-book?id={{.Id}}&type=book&src={{$.BooksTemplateData.RequestMetadata.InvokedBy}}">{{.Title}}</a>
+                    </td>
+                    <td>{{.Author}}</td>
+                    <td>{{.Genre}}</td>
+                    <td><img src="data:image/png;base64, {{.Thumbnail}}" alt="{{.Title}}"/></td>
+                    <td>{{humanDate .Date}}</td>
+                </tr>
+            {{end}}
+        </table>
+    {{else}}
+        <p>No books</p>
+    {{end}}
+    <br/>
+    <br/>
+    <label class='info'>Source: {{.MoviesTemplateData.RequestMetadata.Source}}</label>
+    <label class='info'>Duration: {{.MoviesTemplateData.RequestMetadata.RequestDuration}}</label> <br/>
+    {{if .MoviesTemplateData.Movies}}
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Director</th>
+                <th>Genre</th>
+                <th>Thumbnail</th>
+                <th>Date Added</th>
+            </tr>
+            {{range .MoviesTemplateData.Movies}}
+                <tr>
+                    <td>
+                        <a href="/rent-movie?id={{.Id}}&type=book&src={{$.MoviesTemplateData.RequestMetadata.InvokedBy}}">{{.Title}}</a>
+                    </td>
+                    <td>{{.Director}}</td>
+                    <td>{{.Genre}}</td>
+                    <td><img src="data:image/png;base64, {{.Thumbnail}}" alt="{{.Title}}"/></td>
+                    <td>{{humanDate .Date}}</td>
+                </tr>
+            {{end}}
+        </table>
+    {{else}}
+        <p>No movies</p>
+    {{end}}
+{{ end }}

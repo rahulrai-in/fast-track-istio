@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "date": "2016-01-12T00:00:00Z",
+    "title": "Planet Earth II",
+    "director": "DAVID ATTENBOROUGH",
+    "genre": "Documentary",
+    "thumbnail": "img/planet-earth.jpg",
+    "summary": "Emmy Award-winning, 11 episodes, five years in the making, the most expensive nature documentary series ever commissioned by the BBC, and the first to be filmed in high definition."
+  },
+  {
+    "id": 2,
+    "date": "2020-02-05T00:00:00Z",
+    "title": "Athlete A",
+    "director": "Bonni Cohen, Jon Shenk",
+    "genre": "Documentary",
+    "thumbnail": "img/athlete.jpg",
+    "summary": "Follow the Indianapolis Star reporters that broke the story about USA Gymnastics doctor Larry Nassar's abuse and hear from gymnasts like Maggie Nichols."
+  },
+  {
+    "id": 3,
+    "date": "2020-02-21T00:00:00Z",
+    "title": "The Last Dance",
+    "director": "NETFLIX",
+    "genre": "Documentary",
+    "thumbnail": "img/last-dance.jpg",
+    "summary": "Charting the rise of the 1990's Chicago Bulls, led by Michael Jordan, one of the most notable dynasties in sports history."
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "icon": "fa-istio",
+  "authenticated": false,
+  "noindex": true,
+  "details": {
+    "steps": [
+      {
+        "title": "Prepare Your Kubernetes Cluster",
+        "text": "step1.md"
+      },
+      {
+        "title": "Service Entry & Workload Entry",
+        "text": "step2.md"
+      }
+    ]
+  },
+  "environment": {
+    "hideintro": true,
+    "hidefinish": true,
+    "uilayout": "editor-terminal",
+    "dashboard": "Access Ports",
+    "showdashboard": true,
+    "uimessage1": "\u001b[32mInteractive Bash Terminal.\u001b[m\r\n"
+  },
+  "backend": {
+    "dockerimage": "istio"
+  }
+}
