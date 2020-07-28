@@ -76,7 +76,7 @@ spec:
 
 Execute the following command to apply the policy to the cluster.
 
-`kubectl apply -f my-cluster/books-api-authz-policy.yaml`{{execute}}
+`kubectl apply -f my-workshop/books-api-authz-policy.yaml`{{execute}}
 
 Let's create another busybox pod inside the cluster which has a service account associated with it. We will use this pod to execute one of the tests later. Let's take a brief look at the specification first.
 
