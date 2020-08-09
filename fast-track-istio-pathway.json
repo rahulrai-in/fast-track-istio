@@ -1,5 +1,5 @@
 {
-  "title": "Fast Track Istio - NDC Melbourne 2020",
+  "title": "Fast Track Istio",
   "description": "Explore the features of Istio by strategically deploying a simple microservices application to a Kubernetes cluster.",
   "courses": [
     {
