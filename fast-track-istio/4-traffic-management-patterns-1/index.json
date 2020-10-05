@@ -31,6 +31,6 @@
     "uimessage1": "\u001b[32mInteractive Bash Terminal.\u001b[m\r\n"
   },
   "backend": {
-    "dockerimage": "istio"
+    "dockerimage": "kubernetes-cluster-running:1.18"
   }
 }

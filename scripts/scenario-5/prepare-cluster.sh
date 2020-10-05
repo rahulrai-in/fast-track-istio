@@ -1,8 +1,8 @@
 launch.sh
 
 # Install istioctl
-curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.6.5 sh -
-export PATH="$PATH:/root/istio-1.6.5/bin"
+curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.7.3 sh -
+export PATH=$PWD/istio-1.7.3/bin:$PATH
 
 # Install Istio operator
 istioctl operator init
